@@ -1,4 +1,4 @@
-#include <ros/ros.h>
+#include <rclcpp/rclcpp.h>
 #include <geometry_msgs/Twist.h>
 
 #include <stdio.h>
@@ -178,7 +178,7 @@ int main(int argc, char** argv)
 
     // Publish it and resolve any remaining callbacks
     pub.publish(twist);
-    ros::spinOnce();
+    ros::spin_some();
   }
 
   return 0;
